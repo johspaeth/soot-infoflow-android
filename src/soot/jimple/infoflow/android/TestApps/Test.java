@@ -374,6 +374,10 @@ public class Test {
 				config.setEnableArraySizeTainting(false);
 				i++;
 			}
+			else if (args[i].equalsIgnoreCase("--notaintanalysis")) {
+				config.setTaintAnalysisEnabled(false);
+				i++;
+			}
 			else if (args[i].equalsIgnoreCase("--arraysize")) {
 				config.setEnableArraySizeTainting(true);
 				i++;

@@ -104,7 +104,7 @@ public abstract class AbstractCallbackAnalyzer {
 		try {
 			String fileName = androidCallbackFile;
 			if (!new File(fileName).exists()) {
-				fileName = "../soot-infoflow-android/AndroidCallbacks.txt";
+				fileName = "AndroidCallbacks.txt";
 				if (!new File(fileName).exists())
 					throw new RuntimeException("Callback definition file not found");
 			}
