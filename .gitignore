@@ -6,3 +6,7 @@ bin
 /reports
 /insecureBank/InsecureBank
 /out.log
+/target/
+.project
+.settings/
+.classpath
