@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.beust.jcommander.internal.Lists;
+
 import soot.Scene;
 import soot.SootClass;
 import soot.SootMethod;
@@ -48,7 +50,7 @@ public class FastCallbackAnalyzer extends AbstractCallbackAnalyzer {
 		
 		for (SootClass sc : Scene.v().getApplicationClasses()) {
 			if (sc.isConcrete()) {
-				for (SootMethod sm : sc.getMethods()) {
+				for (SootMethod sm : Lists.newLinkedList(sc.getMethods())) {
 					if (sm.isConcrete()) {
 						analyzeMethodForCallbackRegistrations(null, sm);
 						analyzeMethodForDynamicBroadcastReceiver(sm);
